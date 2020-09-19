@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "729017036372",
+    "firebase_url": "https://trainingsignalapp-575ce.firebaseio.com",
+    "project_id": "trainingsignalapp-575ce",
+    "storage_bucket": "trainingsignalapp-575ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729017036372:android:e1072ca6db812f173007c1",
+        "android_client_info": {
+          "package_name": "com.hextech.trainingsignalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729017036372-mn1mq0fsj6ulev1bj9glqi58hd6g9am7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hextech.trainingsignalapp",
+            "certificate_hash": "30ca1ed108941445066768170d4162317b1b97fd"
+          }
+        },
+        {
+          "client_id": "729017036372-6j8k4mmp25t45nk2r4rtg39rhqtkh3k6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf-Dy3cHBrmKVnGQfb9YFo5w2LPdQ0N-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729017036372-6j8k4mmp25t45nk2r4rtg39rhqtkh3k6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

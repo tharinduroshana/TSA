@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.hextech.trainingsignalapp.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_screeners"
+        android:name="com.hextech.trainingsignalapp.ui.screeners.ScreenersFragment"
+        android:label="Screeners"
+        tools:layout="@layout/fragment_screeners" />
+
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.hextech.trainingsignalapp.ui.news.NewsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+    android:id="@+id/nav_chat"
+    android:name="com.hextech.trainingsignalapp.ui.chatroom.ChatRoomFragment"
+    android:label="Chat Room"
+    tools:layout="@layout/fragment_chat_room" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.hextech.trainingsignalapp.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+</navigation>
