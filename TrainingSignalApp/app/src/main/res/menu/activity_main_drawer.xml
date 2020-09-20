@@ -24,5 +24,10 @@
             android:id="@+id/nav_search"
             android:icon="@drawable/ic_baseline_show_chart_24"
             android:title="Charts" />
+
+        <item
+            android:id="@+id/nav_watchlists"
+            android:icon="@drawable/ic_baseline_watch_later_24"
+            android:title="Watch Lists" />
     </group>
 </menu>

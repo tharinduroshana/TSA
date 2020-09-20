@@ -34,4 +34,10 @@
         android:name="com.hextech.trainingsignalapp.ui.search.SearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/nav_watchlists"
+        android:name="com.hextech.trainingsignalapp.ui.watchlist.WatchListFragment"
+        android:label="Watch Lists"
+        tools:layout="@layout/fragment_watch_list" />
 </navigation>
