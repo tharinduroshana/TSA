@@ -1,6 +1,7 @@
 package com.hextech.trainingsignalapp.ui.watchlist;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
@@ -12,14 +13,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.hextech.trainingsignalapp.R;
+import com.hextech.trainingsignalapp.WatchListInfoActivity;
 import com.hextech.trainingsignalapp.util.DBHelper;
 import com.hextech.trainingsignalapp.util.NetworkAdapter;
 import com.hextech.trainingsignalapp.util.NetworkCallback;
@@ -30,6 +32,7 @@ public class WatchListFragment extends Fragment {
 
     ListView watchList;
     FloatingActionButton addWatchItem;
+    ArrayList<String> records;
 
     String[] autoCompletes = new String[0];
 
@@ -46,6 +49,7 @@ public class WatchListFragment extends Fragment {
         addWatchItem = root.findViewById(R.id.addWatchItem);
 
         loadRecords();
+        setOnClickListener();
 
         addWatchItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,8 +111,19 @@ public class WatchListFragment extends Fragment {
     }
 
     private void loadRecords() {
-        ArrayList<String> records = DBHelper.getAllRecords(getContext().getApplicationContext());
+        records = DBHelper.getAllRecords(getContext().getApplicationContext());
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, records);
         watchList.setAdapter(adapter);
+    }
+
+    private void setOnClickListener() {
+        watchList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), WatchListInfoActivity.class);
+                intent.putExtra("symbol", records.get(i));
+                startActivity(intent);
+            }
+        });
     }
 }

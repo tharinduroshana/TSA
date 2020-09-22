@@ -28,6 +28,7 @@ public class NetworkAdapter {
     public QuoteItem quoteItem;
     public String[] autoCompleteArray;
     public ArrayList<Entry> dataArray;
+    public CompanyProfile companyProfile;
 
     public void requestMovers(final NetworkCallback callback) {
         final OkHttpClient client = new OkHttpClient();
@@ -182,6 +183,29 @@ public class NetworkAdapter {
                     e.printStackTrace();
                 }
 
+            }
+        }).start();
+    }
+
+    public void requestProfileInfo(String symbol, final NetworkCallback callback) {
+        final OkHttpClient client = new OkHttpClient();
+
+        final Request request = createRequest(RequestPaths.PROFILE_INFO_PATH + symbol);
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Response response = client.newCall(request).execute();
+                    String jsonString = response.body().string();
+                    JSONObject json = new JSONObject(jsonString);
+                    companyProfile = convertJsonObjToObj(json, CompanyProfile.class);
+                    callback.onResponse();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         }).start();
     }
