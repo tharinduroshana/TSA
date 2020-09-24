@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.tabs.charts.ChartsFragment">
+    tools:context=".ui.tabs.charts.ChartsFragment"
+    android:background="@color/darkBlue">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -17,12 +18,17 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:textSize="18sp"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            />
 
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/chart"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            />
     </LinearLayout>
 
 </FrameLayout>

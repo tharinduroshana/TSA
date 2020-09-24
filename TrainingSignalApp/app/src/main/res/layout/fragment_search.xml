@@ -3,20 +3,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back2"
     android:orientation="vertical"
     tools:context=".ui.search.SearchFragment">
 
-    <AutoCompleteTextView
-        android:id="@+id/searchTextView"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search"
-        android:completionThreshold="1"/>
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="200sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Search the chart name to view chart details."
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/getChartButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get Chart" />
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <AutoCompleteTextView
+            android:id="@+id/searchTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/et_style"
+            android:completionThreshold="1"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Search the chart"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/getChartButton"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_style"
+            android:text="Get Chart" />
+
+    </LinearLayout>
 
 </LinearLayout>

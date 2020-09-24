@@ -2,11 +2,13 @@ package com.hextech.trainingsignalapp.ui.watchlist;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import android.os.health.SystemHealthManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -47,7 +49,6 @@ public class WatchListFragment extends Fragment {
         final View root = inflater.inflate(R.layout.fragment_watch_list, container, false);
         watchList = root.findViewById(R.id.watchList);
         addWatchItem = root.findViewById(R.id.addWatchItem);
-
         loadRecords();
         setOnClickListener();
 
@@ -86,6 +87,7 @@ public class WatchListFragment extends Fragment {
                     }
                 });
                 symbolSearchTextView.setHint("Symbol");
+              //  symbolSearchTextView.setBackgroundColor(Color.parseColor("#D503DAC5");
                 builder1.setTitle("Search Symbol");
                 builder1.setCancelable(true);
                 builder1.setView(symbolSearchTextView);

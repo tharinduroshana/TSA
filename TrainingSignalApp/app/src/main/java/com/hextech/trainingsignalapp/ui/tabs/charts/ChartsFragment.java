@@ -1,5 +1,6 @@
 package com.hextech.trainingsignalapp.ui.tabs.charts;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -77,9 +78,27 @@ public class ChartsFragment extends Fragment {
                         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
                         dataSets.add(dataSet);
 
+                        dataSet.setLineWidth(1.7f);
+                        dataSet.setCircleRadius(5.5f);
+                        dataSet.setCircleHoleRadius(3.5f);
+                        dataSet.setColor(Color.parseColor("#D503DAC5"));
+                        dataSet.setCircleColor(Color.parseColor("#D503DAC5"));
+                        dataSet.setValueTextColor(Color.parseColor("#FFFFFF"));
+                        dataSet.setValueTextSize(10f);
+
                         LineData data = new LineData(dataSets);
                         chart.setData(data);
                         chart.getDescription().setText("USD");
+                        chart.getDescription().setTextColor(Color.parseColor("#FFFFFF"));
+                        chart.getAxisLeft().setTextColor(Color.parseColor("#D503DAC5"));
+                        chart.getAxisRight().setTextColor(Color.parseColor("#D503DAC5"));// left y-axis
+                        chart.getXAxis().setTextColor(Color.parseColor("#D503DAC5"));
+                        chart.getLegend().setTextColor(Color.parseColor("#FFFFFF"));
+                        chart.getXAxis().setTextSize(10);
+                        chart.getAxisLeft().setTextSize(14);
+                        chart.getAxisRight().setTextSize(14);
+                        chart.getLegend().setTextSize(14);
+                        chart.getDescription().setTextSize(14);
                         chart.invalidate();
                         loadingDialog.stopLoading();
                     }
