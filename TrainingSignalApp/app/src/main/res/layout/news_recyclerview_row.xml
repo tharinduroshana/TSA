@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:padding="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp" >
+        android:layout_height="100dp"
+        card_view:cardCornerRadius="15dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/blue2">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="10sp">
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Title"
                     android:maxLines="3"
-                    android:textStyle="bold"
                     android:layout_weight="3"
-                    android:textSize="15sp"/>
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-black" />
                 <TextView
                     android:id="@+id/footerTextView"
                     android:text="publisher name"
@@ -34,7 +39,9 @@
                     android:textAlignment="gravity"
                     android:gravity="right"
                     android:layout_weight="1"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

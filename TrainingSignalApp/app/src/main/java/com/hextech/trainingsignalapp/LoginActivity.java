@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,7 +29,8 @@ import com.karumi.dexter.listener.single.PermissionListener;
 public class LoginActivity extends AppCompatActivity {
 
     EditText emailEditText, passwordEditText;
-    Button loginButton, registerButton;
+    Button loginButton;
+    TextView registerTextView;
 
     LoadingDialog loadingDialog;
 
@@ -61,8 +63,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        registerButton = findViewById(R.id.registerButton);
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        registerTextView = findViewById(R.id.registerTextView);
+        registerTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));

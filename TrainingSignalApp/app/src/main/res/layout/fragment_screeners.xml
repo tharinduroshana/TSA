@@ -4,24 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/background3"
     tools:context=".ui.screeners.ScreenersFragment">
 
-    <Button
-        android:id="@+id/topDayGainersButton"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Top Gainers" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center|bottom"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/topDayLosersButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Top Losers" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Select a screener category to view details."
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/mostActivesButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Most Actives" />
+        <Button
+            android:id="@+id/topDayGainersButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:height="70dp"
+            android:background="@drawable/elevated_button"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="Top Gainers"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/topDayLosersButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:height="70dp"
+            android:background="@drawable/elevated_button"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="Top Losers"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/mostActivesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:height="70dp"
+            android:background="@drawable/elevated_button"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="@color/white"
+            android:textColor="@color/white"
+            android:text="Most Actives"
+            android:textSize="18dp" />
+
+    </LinearLayout>
 </LinearLayout>

@@ -25,7 +25,7 @@ import com.hextech.trainingsignalapp.util.LoadingDialog;
 public class RegisterActivity extends AppCompatActivity {
 
     EditText emailEditText, passwordEditText, repasswordEditText, nameEditText;
-    Button registerButton, imageSelect;
+    Button registerButton;
     ImageView profilePictureImageView;
     private FirebaseAuth mAuth;
 
@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
         loadingDialog = new LoadingDialog(RegisterActivity.this);
 
         registerButton = findViewById(R.id.registerButton);
-        imageSelect = findViewById(R.id.imageSelect);
+        //imageSelect = findViewById(R.id.imageSelect);
         profilePictureImageView = findViewById(R.id.profilePictureImageView);
 
         emailEditText = findViewById(R.id.emailEditText);
@@ -52,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
         repasswordEditText = findViewById(R.id.repasswordEditText);
         nameEditText = findViewById(R.id.nameEditText);
 
-        imageSelect.setOnClickListener(new View.OnClickListener() {
+        profilePictureImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
